@@ -1,0 +1,28 @@
+C:\Users\L E G E N D\Desktop\Students\bin\Debug\net8.0\Students.exe
+C:\Users\L E G E N D\Desktop\Students\bin\Debug\net8.0\Students.deps.json
+C:\Users\L E G E N D\Desktop\Students\bin\Debug\net8.0\Students.runtimeconfig.json
+C:\Users\L E G E N D\Desktop\Students\bin\Debug\net8.0\Students.dll
+C:\Users\L E G E N D\Desktop\Students\bin\Debug\net8.0\Students.pdb
+C:\Users\L E G E N D\Desktop\Students\obj\Debug\net8.0\Students.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\L E G E N D\Desktop\Students\obj\Debug\net8.0\Students.AssemblyInfoInputs.cache
+C:\Users\L E G E N D\Desktop\Students\obj\Debug\net8.0\Students.AssemblyInfo.cs
+C:\Users\L E G E N D\Desktop\Students\obj\Debug\net8.0\Students.csproj.CoreCompileInputs.cache
+C:\Users\L E G E N D\Desktop\Students\obj\Debug\net8.0\Students.dll
+C:\Users\L E G E N D\Desktop\Students\obj\Debug\net8.0\refint\Students.dll
+C:\Users\L E G E N D\Desktop\Students\obj\Debug\net8.0\Students.pdb
+C:\Users\L E G E N D\Desktop\Students\obj\Debug\net8.0\Students.genruntimeconfig.cache
+C:\Users\L E G E N D\Desktop\Students\obj\Debug\net8.0\ref\Students.dll
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\bin\Debug\net8.0\Students.exe
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\bin\Debug\net8.0\Students.deps.json
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\bin\Debug\net8.0\Students.runtimeconfig.json
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\bin\Debug\net8.0\Students.dll
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\bin\Debug\net8.0\Students.pdb
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\obj\Debug\net8.0\Students.GeneratedMSBuildEditorConfig.editorconfig
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\obj\Debug\net8.0\Students.AssemblyInfoInputs.cache
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\obj\Debug\net8.0\Students.AssemblyInfo.cs
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\obj\Debug\net8.0\Students.csproj.CoreCompileInputs.cache
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\obj\Debug\net8.0\Students.dll
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\obj\Debug\net8.0\refint\Students.dll
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\obj\Debug\net8.0\Students.pdb
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\obj\Debug\net8.0\Students.genruntimeconfig.cache
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\obj\Debug\net8.0\ref\Students.dll
