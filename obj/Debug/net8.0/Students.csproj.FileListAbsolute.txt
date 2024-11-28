@@ -26,3 +26,4 @@ E:\دوره های برنامه نویسی\! دوره های استاد عاشو
 E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\obj\Debug\net8.0\Students.pdb
 E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\obj\Debug\net8.0\Students.genruntimeconfig.cache
 E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\obj\Debug\net8.0\ref\Students.dll
+E:\دوره های برنامه نویسی\! دوره های استاد عاشورلو !\دوره C#\Cs Zamime\TamrinHa\Tamrin24(Students)\Students\obj\Debug\net8.0\Students.sourcelink.json
