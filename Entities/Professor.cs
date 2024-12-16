@@ -11,7 +11,6 @@ namespace Students.Entities
         public string? Lesson { get; set; }
         public Professor(string fullName, double age, string lesson) : base(fullName, age)
         {
-            Id = _professorIdCounter++;
             Lesson = lesson;
         }
 
@@ -21,7 +20,7 @@ namespace Students.Entities
             string fullName = Console.ReadLine() ?? "";
             TColor.Yellow("<2> Enter age : ");
             double age = double.Parse(Console.ReadLine() ?? "");
-            TColor.Yellow("<3> Enter average : ");
+            TColor.Yellow("<3> Enter lesson : ");
             string lesson = Console.ReadLine() ?? "";
 
             FullName = fullName;

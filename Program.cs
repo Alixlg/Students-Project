@@ -1,12 +1,12 @@
 ﻿using System.Drawing;
 using System.Reflection.Metadata.Ecma335;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
+using Students.Data;
 using Students.Entities;
 using Students.Tools;
 try
 {
-    List<Student> students = new();
-    List<Professor> professors = new();
-
     Menu mainMenu = new();
     Menu studentMenu = new();
     Menu professorMenu = new();
@@ -21,9 +21,10 @@ try
             Tittel = "StudentList",
             TaskToDo = ()=>
             {
+                using var db = new DataBase1();
                 TColor.Blue("============== StudentList ==============\n");
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                students.ForEach((p)=>Console.WriteLine($"<Id : {p.Id}> <FullName : {p.FullName}> <Age : {p.Age}> <Average : {p.Avg}>"));
+                db.Students?.ToList().ForEach((p)=>Console.WriteLine($"<Id : {p.Id}> <FullName : {p.FullName}> <Age : {p.Age}> <Average : {p.Avg}>"));
                 TColor.Blue("============== EndList ==============\n");
             }
         },
@@ -32,7 +33,10 @@ try
             Tittel = "Add",
             TaskToDo = ()=>
             {
-                students.Add(Operation.GetingStudentData());
+                using var db = new DataBase1();
+                db.Students?.Add(Operation.GetingStudentData());
+                db.SaveChanges();
+                TColor.Green("<Successfully added !> \n");
                 Console.Beep();
             }
         },
@@ -43,7 +47,9 @@ try
             {
                 TColor.Yellow("Enter id(for edit) : ");
                 int id = int.Parse(Console.ReadLine()?? "");
-                var result = students.LastOrDefault((p) => p.Id == id);
+
+                using var db = new DataBase1();
+                var result = db.Students?.ToList().LastOrDefault((p) => p.Id == id);
 
                 if (result == null)
                 {
@@ -56,6 +62,7 @@ try
                     Console.WriteLine($"<<Id:{id} FullName:{result.FullName} Avg:{result.Avg}>>");
                     Console.ResetColor();
                     result.Edit();
+                    db.SaveChanges();
                     TColor.Green("<Successfully Edited !> \n");
                 }
             }
@@ -67,16 +74,18 @@ try
             {
                 TColor.Yellow("Enter id(for search) : ");
                 int id = int.Parse(Console.ReadLine()?? "");
-                var result = students.Where((p) => {return p.Id==id ;}).ToList();
 
-                if (result.Count == 0)
+                using var db = new DataBase1();
+                var result = db.Students?.ToList().Where((p) => {return p.Id==id ;}).ToList();
+
+                if (result?.Count == 0)
                 {
                     TColor.Red("Not Found!\n");
                 }
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    result.ForEach((p) => {Console.WriteLine($"<Id : [{p.Id}]  Fullname : [{p.FullName}]  Age : [{p.Age}]  Avg : [{p.Avg}]>");});
+                    result?.ForEach((p) => {Console.WriteLine($"<Id : [{p.Id}]  Fullname : [{p.FullName}]  Age : [{p.Age}]  Avg : [{p.Avg}]>");});
                     Console.ResetColor();
                 }
             }
@@ -86,9 +95,11 @@ try
             Tittel = "Order By Average",
             TaskToDo = ()=>
             {
+                using var db = new DataBase1();
+
                 TColor.Red("============== OrderByAvrageList ==============\n");
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
-                students
+                db.Students?
                     .OrderByDescending(o => o.Avg)
                     .ToList()
                     .ForEach(p => Console.WriteLine($"<Id : [{p.Id}]  Fullname : [{p.FullName}]  Age : [{p.Age}]  Avg : [{p.Avg}]>"));
@@ -110,9 +121,10 @@ try
             Tittel = "Professors List",
             TaskToDo = ()=>
             {
+                using var db = new DataBase1();
                 TColor.Blue("============== ProfessorList ==============\n");
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                professors.ForEach((p)=>Console.WriteLine($"<Id:{p.Id}> < FullName:{p.FullName}> <Age:{p.Age}> <Lesson:{p.Lesson}>"));
+                db.Professors?.ToList().ForEach((p)=>Console.WriteLine($"<Id:{p.Id}> < FullName:{p.FullName}> <Age:{p.Age}> <Lesson:{p.Lesson}>"));
                 TColor.Blue("============== EndList ==============\n");
             }
         },
@@ -121,7 +133,10 @@ try
             Tittel = "Add",
             TaskToDo = ()=>
             {
-                professors.Add(Operation.GetingProfessorData());
+                using var db = new DataBase1();
+                db.Professors?.Add(Operation.GetingProfessorData());
+                db.SaveChanges();
+                TColor.Green("<Successfully added !> \n");
                 Console.Beep();
             }
         },
@@ -132,7 +147,9 @@ try
             {
                 TColor.Yellow("Enter id(for edit) : ");
                 int id = int.Parse(Console.ReadLine()?? "");
-                var result = professors.LastOrDefault((p) => p.Id == id);
+
+                using var db = new DataBase1();
+                var result = db.Professors?.ToList().LastOrDefault((p) => p.Id == id);
 
                 if (result == null)
                 {
@@ -145,6 +162,7 @@ try
                     Console.WriteLine($"<<Id:{id} FullName:{result.FullName} Lesson:{result.Lesson}>>");
                     Console.ResetColor();
                     result.Edit();
+                    db.SaveChanges();
                     TColor.Green("<Successfully Edited !> \n");
                 }
             }
@@ -156,16 +174,18 @@ try
             {
                 TColor.Yellow("Enter id(for search) : ");
                 int id = int.Parse(Console.ReadLine()?? "");
-                var result = professors.Where((p) => {return p.Id==id ;}).ToList();
 
-                if (result.Count == 0)
+                using var db = new DataBase1();
+                var result = db.Professors?.ToList().Where((p) => {return p.Id==id ;}).ToList();
+
+                if (result?.Count == 0)
                 {
                     TColor.Red("Not Found!\n");
                 }
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    result.ForEach((p) => {Console.WriteLine($"<Id : [{p.Id}]  Fullname : [{p.FullName}]  Age : [{p.Age}]  Lesson : [{p.Lesson}]>");});
+                    result?.ForEach((p) => {Console.WriteLine($"<Id : [{p.Id}]  Fullname : [{p.FullName}]  Age : [{p.Age}]  Lesson : [{p.Lesson}]>");});
                     Console.ResetColor();
                 }
             }
@@ -187,7 +207,9 @@ try
             {
                 TColor.Yellow("Enter Id(for remove) : ");
                 int id = int.Parse(Console.ReadLine()??"");
-                var result = professors.FirstOrDefault(p => p.Id==id);
+
+                using var db = new DataBase1();
+                var result = db.Professors?.FirstOrDefault(p => p.Id==id);
 
                 if (result == null)
                 {
@@ -197,7 +219,8 @@ try
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"<<Professor with id[{result.Id}] and name[{result.FullName}] is Deleted!>>");
-                    professors.Remove(result);
+                    db.Professors?.Remove(result);
+                    db.SaveChanges();
                 }
             }
         },
@@ -208,7 +231,9 @@ try
             {
                 TColor.Yellow("Enter Id(for remove) : ");
                 int id = int.Parse(Console.ReadLine()??"");
-                var result = students.FirstOrDefault(s => s.Id==id);
+
+                using var db = new DataBase1();
+                var result = db.Students?.FirstOrDefault(s => s.Id==id);
 
                 if (result == null)
                 {
@@ -218,7 +243,8 @@ try
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"<<Student with id[{result.Id}] and name[{result.FullName}] is Deleted!>>");
-                    students.Remove(result);
+                    db.Students?.Remove(result);
+                    db.SaveChanges();
                 }
             }
         },
@@ -238,8 +264,9 @@ try
             Tittel = "Deleted All Students",
             TaskToDo = ()=>
             {
-                students.Clear();
-                Student._studentIdCounter = 1001;
+                using var db = new DataBase1();
+                db.Students?.ToList().Clear();
+                db.SaveChanges();
                 TColor.Green("All Students is deleted!");
             }
         },
@@ -248,8 +275,9 @@ try
             Tittel = "Deleted All Professors",
             TaskToDo = ()=>
             {
-                professors.Clear();
-                Professor._professorIdCounter = 1001;
+                using var db = new DataBase1();
+                db.Professors?.ToList().Clear();
+                db.SaveChanges();
                 TColor.Green("All professors is deleted!");
             }
         },

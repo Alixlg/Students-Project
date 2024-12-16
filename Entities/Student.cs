@@ -12,7 +12,6 @@ namespace Students.Entities
         public bool IsActive { get; set; }
         public Student(string fullName, double age, double avg) : base(fullName, age)
         {
-            Id = _studentIdCounter++;
             Avg = avg;
         }
 

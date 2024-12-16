@@ -10,13 +10,29 @@ This project was generated using [.NET SDK](https://dotnet.microsoft.com/en-us/d
 Install Dotnet Runtime or SDK version 8 or upper
 Install EF-Core and sqlite 
 ```bash
+dotnet tool install --global dotnet-ef
+```
+```bash
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+```
+```bash
+dotnet add package Microsoft.EntityFrameworkCore.Design
 ```
 
 ## How To Run
 
 Enter in Terminal :
 ```bash
+dotnet ef database update
+```
+```bash
 dotnet run
 ```
+
+## Admin
+
+UserName : Admin
+Password : 1234
+Note : You can change password in program !
+
 Thanks for reading :)
